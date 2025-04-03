@@ -1,0 +1,73 @@
+<!-- ======== Вариант 1 (короткий/минифицированный) ======== -->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Адаптивный блок по типу Tilda</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Rubik',Helvetica,Arial,sans-serif}
+    .hero-block{width:100%;max-width:2560px;margin:0 auto;display:flex;flex-wrap:wrap}
+    .hero-block__text{box-sizing:border-box;padding:20px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;order:0}
+    .hero-block__img{box-sizing:border-box;background:url('https://optim.tildacdn.com/tild3730-3931-4262-b839-643530323337/-/format/webp/photo1469349857311a8fa13eafc33.jpeg') center no-repeat;position:relative;order:1}
+    .hero-block__badge{position:absolute;z-index:10;width:130px;height:130px;border-radius:50%;background:#F8D551;box-shadow:0 0 10px rgba(0,0,0,0.15);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+    .hero-block__badge-line1{font-size:.875rem;font-weight:400}
+    .hero-block__badge-line2{font-size:1.125rem;font-weight:700;margin:3px 0}
+    .hero-block__badge-line3{font-size:.875rem;font-weight:400}
+    .hero-block__btn{display:inline-block;padding:15px 30px;background:#F8D551;color:#000;text-decoration:none;border-radius:6px;transition:.3s;font-size:.875rem;font-weight:600;margin-top:20px}
+    .hero-block__btn:hover{background:rgb(255,212,43);color:#fff}
+    .hero-block__pretitle{font-size:.8rem;margin-bottom:10px;font-weight:500;color:#7e7e7e}
+    .hero-block__title{font-size:2.4rem;margin:0 0 10px;font-weight:700}
+    .hero-block__title-highlight{color:#f88e51}
+    .hero-block__subtitle{font-size:1.2rem;margin:0 0 40px;font-weight:400}
+    .hero-block__benefits{list-style:none;padding:0;margin:0 0 20px;font-size:1.2rem}
+    .hero-block__benefits li{margin-bottom:20px;position:relative;padding-left:30px}
+    .hero-block__benefits li::before{content:"";position:absolute;left:0;top:0;width:24px;height:24px;background-size:contain;background-repeat:no-repeat}
+    .hero-block__benefits li:nth-child(1)::before{background:url("icons/guarantee.png") center/contain no-repeat}
+    .hero-block__benefits li:nth-child(2)::before{background:url("icons/factory.png") center/contain no-repeat}
+    .hero-block__benefits li:nth-child(3)::before{background:url("icons/flag.png") center/contain no-repeat}
+    .hero-block__promo{margin-top:20px;font-size:.875rem;font-weight:500;position:relative;padding-left:30px}
+    .hero-block__promo::before{content:"";display:inline-block;position:absolute;left:0;top:0;width:24px;height:24px;background:url("icons/giftbox.png") center/contain no-repeat}
+    @media(min-width:981px){
+      .hero-block__text,.hero-block__img{flex:0 0 50%}
+      .hero-block__img{min-height:500px;background-size:cover}
+      .hero-block__badge{top:50%;left:0;transform:translate(-50%,-50%)}
+    }
+    @media(min-width:981px) and (max-width:1152px){
+      .hero-block__text{padding-right:60px}
+    }
+    @media(max-width:980px){
+      .hero-block__text,.hero-block__img{flex:0 0 100%}
+      .hero-block__img{background-size:contain;background-position:top;aspect-ratio:1.503;width:100%}
+      .hero-block__badge{top:50%;left:50%;transform:translate(-50%,-50%)}
+    }
+  </style>
+</head>
+<body>
+  <section class="hero-block">
+    <div class="hero-block__text">
+      <div class="hero-block__pretitle">Работаем Москва и 100 км от МКАД</div>
+      <h1 class="hero-block__title">Кухни на заказ <span class="hero-block__title-highlight">за 15 дней</span></h1>
+      <p class="hero-block__subtitle">«Под ключ» с гарантией сроков: от&nbsp;идеи до&nbsp;установки&nbsp;техники</p>
+      <ul class="hero-block__benefits">
+        <li>Гарантия 10 лет</li>
+        <li>Собственное производство в&nbsp;Беларуси и&nbsp;Москве</li>
+        <li>Белорусское качество</li>
+      </ul>
+      <a href="/page42818589.html" class="hero-block__btn">РАССЧИТАТЬ СТОИМОСТЬ за 15 минут</a>
+      <p class="hero-block__promo">Варочная панель в&nbsp;подарок при&nbsp;замере до&nbsp;1&nbsp;мая</p>
+    </div>
+    <div class="hero-block__img">
+      <div class="hero-block__badge">
+        <div class="hero-block__badge-line1">от</div>
+        <div class="hero-block__badge-line2">50 000р</div>
+        <div class="hero-block__badge-line3">метр погонный</div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
